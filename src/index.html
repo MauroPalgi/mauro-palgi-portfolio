@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
     <title>Mauro Palgi - Portfolio</title>
-</head>
-<body>
-    <p>hola</p>    
-</body>
-</html>   
+  </head>
+  <body>
+    <div class="editor">
+      <canvas id="canvas"></canvas>
+      <div class="tools">
+        <button class="button"></button>
+        <button class="button"></button>
+        <button class="button"></button>
+      </div>
+    </div>
+    <aside class="panel">
+      <div class="panel__bar">
+        <div class="panel__bar__prompt">
+          <p>Command Prompt</p>
+        </div>
+        <div class="panel__bar__icons"></div>
+      </div>
+      <div class="panel__output"></div>
+      <input type="text" name="" id="panel__input" placeholder=">" />
+    </aside>
+  </body>
+</html>

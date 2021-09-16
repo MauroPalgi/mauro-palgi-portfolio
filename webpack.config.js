@@ -1,11 +1,12 @@
 const path = require("path");
 const webpack = require("webpack");
-
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+// CREATE TWO MODE WEBPACK: "DEV" - "PROD"
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, "./src/index.js"),
+    main: path.resolve(__dirname, "./src/js/index.js"),
   },
   mode: 'development',
   devServer: {
@@ -24,7 +25,11 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
   ],
   module: {
-    rules: [      
+    rules: [  
+      {
+        test: /\.(scss|css)$/,
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+      },    
       {
         test: /\.js$/,
         exclude: /node_modules/,
